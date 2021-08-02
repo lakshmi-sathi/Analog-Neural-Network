@@ -18,10 +18,10 @@
    # SPDX-License-Identifier: Apache-2.0
    -->
 
-Caravel User Project
-====================
+Caravel Analog User Project
+===========================
 
-|License| |User CI| |Caravel Build|
+|License| |User CI| |Caravan Build|
 
 Table of contents
 =================
@@ -30,30 +30,19 @@ Table of contents
 -  `Install Caravel <#install-caravel>`__
 -  `Caravel Integration <#caravel-integration>`__
 
-   -  `Repo Integration <#repo-integration>`__
+   - `User Project: Power on Reset <#user-project-power-on-reset>`_
    -  `Verilog Integration <#verilog-integration>`__
-
+   
 -  `Running Full Chip Simulation <#running-full-chip-simulation>`__
--  `Hardening the User Project Macro using
-   Openlane <#hardening-the-user-project-macro-using-openlane>`__
+-  `Analog Design Flow <#analog-design-flow>`__
+- `Other Miscellaneous Targets <#other-miscellaneous-targets>`_
 -  `Checklist for Open-MPW
    Submission <#checklist-for-open-mpw-submission>`__
-
+   
 Overview
 ========
 
-This repo contains a sample user project that utilizes the
-`caravel <https://github.com/efabless/caravel.git>`__ chip user space.
-The user project is a simple counter that showcases how to make use of
-`caravel's <https://github.com/efabless/caravel.git>`__ user space
-utilities like IO pads, logic analyzer probes, and wishbone port. The
-repo also demonstrates the recommended structure for the open-mpw
-shuttle projects.
-
-Prerequisites
-=============
-
-- Docker
+This repo contains a sample user project that utilizes the caravan chip (analog version of `caravel <https://github.com/efabless/caravel.git>`__) user space. The user project is a simple power-on-reset that showcases how to make use of caravan's user space utilities like IO pads, logic analyzer probes, and wishbone port. The repo also demonstrates the recommended structure for the open-mpw **analog** projects.
 
 Install Caravel
 ===============
@@ -66,8 +55,8 @@ To setup caravel, run the following:
     # If you want to install caravel at a different location, run "export CARAVEL_ROOT=<caravel-path>"
     # Disable submodule installation if needed by, run "export SUBMODULE=0"
     
-    git clone https://github.com/efabless/caravel_user_project.git
-    cd caravel_user_project
+    git clone https://github.com/efabless/caravel_user_project_analog.git
+    cd caravel_user_project_analog
     make install
 
 To update the installed caravel to the latest, run:
@@ -90,67 +79,51 @@ calling make install.
 .. code:: bash
 
     export CARAVEL_LITE=0
-
+ 
 Caravel Integration
-===================
+=====================
 
-Repo Integration
-----------------
 
-Caravel files are kept separate from the user project by having caravel
-as submodule. The submodule commit should point to the latest of
-caravel/caravel-lite master. The following files should have a symbolic
-link to `caravel's <https://github.com/efabless/caravel.git>`__
-corresponding files:
+User Project: Power on Reset
+----------------------------
 
--  `Openlane Makefile <openlane/Makefile>`__: This provides an easier
-   way for running openlane to harden your macros. Refer to `Hardening
-   the User Project Macro using
-   Openlane <#hardening-the-user-project-macro-using-openlane>`__. Also,
-   the makefile retains the openlane summary reports under the signoff
-   directory.
+This is an example user analog project which breaks out the power-on-reset
+circuit used by the management SoC for power-up behavior so that the circuit
+input and output can be independently controlled and measured.
 
--  `Pin order <openlane/user_project_wrapper/pin_order.cfg>`__ file for
-   the user wrapper: The hardened user project wrapper macro must have
-   the same pin order specified in caravel's repo. Failing to adhere to
-   the same order will fail the gds integration of the macro with
-   caravel's back-end.
+The power-on-reset circuit itself is a simple, non-temperature-compensated
+analog delay calibrated to 15ms under nominal conditions, with a Schmitt
+trigger inverter to provide hysteresis around the trigger point to provide
+a clean output reset signal. 
 
-The symbolic links are automatically set when you run ``make install``.
+The circuit provides a single high-voltage (3.3V domain) sense-inverted reset
+signal "porb_h" and complementary low-voltage (1.8V domain) reset signals
+"por_l" and "porb_l".
+
+The only input to the circuit is the 3.3V domain power supply itself.
+
 
 Verilog Integration
 -------------------
 
 You need to create a wrapper around your macro that adheres to the
 template at
-`user\_project\_wrapper <caravel/verilog/rtl/__user_project_wrapper.v>`__.
-The wrapper top module must be named ``user_project_wrapper`` and must
-have the same input and output ports. The wrapper gives access to the
+`user\_analog_project\_wrapper <https://github.com/efabless/caravel/blob/master/verilog/rtl/__user_analog_project_wrapper.v>`__.
+The wrapper top module must be named ``user_analog_project_wrapper`` and must
+have the same input and output ports as the analog wrapper template. The wrapper gives access to the
 user space utilities provided by caravel like IO ports, logic analyzer
 probes, and wishbone bus connection to the management SoC.
 
-For this sample project, the user macro makes use of:
+The verilog modules instantiated in the wrapper module should represent
+the analog project;  they need not be more than empty blocks, but it is
+encouraged to write a simple behavioral description of the analog circuit
+in standard verilog, using real-valued wires when necessary.  This allows
+the whole system to be run in a verilog testbench and verify the connectivity
+to the padframe and management SoC, even if the testbench C code does nothing
+more than set the mode of each GPIO pin.  The example top-level verilog code
+emulates the behavior of the power-on-reset delay after applying a valid
+power supply to the circuit.
 
--  The IO ports for displaying the count register values on the IO pads.
-
--  The LA probes for supplying an optional reset and clock signals and
-   for setting an initial value for the count register.
-
--  The wishbone port for reading/writing the count value through the
-   management SoC.
-
-Refer to `user\_project\_wrapper <verilog/rtl/user_project_wrapper.v>`__
-for more information.
-
-.. raw:: html
-
-   <p align="center">
-   <img src="./_static/counter_32.png" width="50%" height="50%">
-   </p>
-
-.. raw:: html
-
-   </p>
 
 Building the PDK 
 ================
@@ -159,7 +132,7 @@ You have two options for building the pdk:
 
 - Build the pdk natively. 
 
-Make sure you have `Magic VLSI Layout Tool <http://opencircuitdesign.com/magic/index.html>`__ installed on your machine before building the pdk. 
+Make sure you have `Magic VLSI Layout Tool <http://opencircuitdesign.com/magic/index.html>`__   `version 8.3.160 <https://github.com/RTimothyEdwards/magic/tree/8.3.160>`__ installed on your machine before building the pdk. 
 
 .. code:: bash
 
@@ -196,6 +169,8 @@ First, you will need to install the simulation environment, by
 
 This will pull a docker image with the needed tools installed.
 
+To install the simulation environment locally, refer to `README <https://github.com/efabless/caravel_user_project_analog/blob/main/verilog/dv/README.md>`__
+
 Then, run the RTL and GL simulation by
 
 .. code:: bash
@@ -204,60 +179,68 @@ Then, run the RTL and GL simulation by
     export CARAVEL_ROOT=$(pwd)/caravel
     # specify simulation mode: RTL/GL
     export SIM=RTL
-    # Run IO ports testbench, make verify-io_ports
-    make verify-<dv-pattern>
+    # Run the mprj_por testbench, make verify-mprj_por
+    make verify-<testbench-name>
 
 The verilog test-benches are under this directory
-`verilog/dv <https://github.com/efabless/caravel_user_project/tree/main/verilog/dv>`__. For more information on setting up the
-simulation environment and the available testbenches for this sample
-project, refer to `README <https://github.com/efabless/caravel_user_project/blob/main/verilog/dv/README.md>`__.
+`verilog/dv <https://github.com/efabless/caravel_user_project_analog/tree/main/verilog/dv>`__.
 
-Hardening the User Project Macro using Openlane
-===============================================
 
-You will need to install openlane by running the following
+Analog Design Flow
+===================
 
-.. code:: bash
+The example project uses a very simple analog design flow with schematics
+made with xschem, simulation done using ngspice, layout done with magic,
+and LVS verification done with netgen.  Sources for the power-on-reset
+circuit are in the "xschem/" directory, which also includes a schematic
+representing the wrapper with all of its ports, for use in a testbench
+circuit.  There are several testbenches in the example, starting from
+tests of the component devices to a full test of the completed project
+inside the wrapper.
 
-   export OPENLANE_ROOT=<openlane-installation-path>
-   export OPENLANE_TAG=<latest-openlane-tag>
-   make openlane
+There is no automation in this project;  the schematic and layout were
+done by hand, including both the power-on-reset block and the power and
+signal routing to the pins on the wrapper.
 
-For detailed instructions on how to install openlane and the pdk refer
-to
-`README <https://github.com/efabless/openlane/blob/master/README.md>`__.
+The power-on-reset circuit itself is simple and is not compensated for
+temperature or voltage variation.  When the power supply reaches a
+sufficient level, the voltage divider sets the gate voltage on an nFET
+device to draw a current of nominally 240nA.  The testbench
+"threshold_test_tb.spice" does a DC sweep to find the gate voltage that
+produces this value.   Next, a cascaded current mirror divides down the
+current by a factor of (roughly) 400.  The testbench current_test.spice
+checks the current division value.  Finally, the output ~600pA from the
+end of the current mirror is accumulated on a capacitor until the value
+trips the input of the 3.3V Schmitt trigger buffer from the
+sky130_fd_sd_hvl library.  The capacitor is sized to peg the nominal
+time to trigger at 15ms.  The schematic "example_por_tb.sch" sets up
+the testbench for this timing test.
 
-There are two options for hardening the user project macro using
-openlane:
+The output of the Schmitt trigger buffer becomes the high-voltage
+output, and is input to a standard buffer and inverter used as
+level shifters from the 3.3V domain to the 1.8V domain, producing
+complementary low-voltage outputs.
 
-1. Hardening the user macro, then embedding it in the wrapper
-2. Flattening the user macro with the wrapper.
+The user project is formed from two power-on-reset circuits, one of
+which is connected to the user area VDDA1 power supply, and the other
+of which is connected to one of the analog I/O pads, used as a power
+supply input and connected to its voltage ESD clamp circuit.  The
+3.3V domain outputs are connected directly to GPIO pads through the
+ESD (150 ohm series) connection.  The 1.8V domain outputs are connected
+to GPIO pads through the usual I/O connections, with the corresponding
+user output enable (sense inverted) held low to keep the output always
+active.
 
-For more details on this, refer to this
-`README <https://github.com/efabless/caravel/blob/master/openlane/README.rst>`__.
+The C code testbench is in "verilog/dv/mprj_por/mprj_por.c" and only
+sets the GPIO pins used to the correct state (user output function).
+The POR circuit outputs are monitored by the testbench verilog file
+"mprj_por_tb.v" which will fail if the connections are wrong or if
+the behavioral POR verilog does not work as intended.
 
-For this sample project, we went for the first option where the user
-macro is hardened first, then it is inserted in the user project
-wrapper.
-
-.. raw:: html
-
-   <p align="center">
-   <img src="./_static/wrapper.png" width="50%" height="50%">
-   </p>
-
-.. raw:: html
-
-   </p>
-
-To reproduce hardening this project, run the following:
-
-.. code:: bash
-
-   # Run openlane to harden user_proj_example
-   make user_proj_example
-   # Run openlane to harden user_project_wrapper
-   make user_project_wrapper
+Note that to properly test this circuit, the GPIO pins have to be
+configured for output to be seen and measured, implying that the
+management SoC power supply must be stable and the C program running
+off of the SPI flash before the user area power supplies are raised.
 
 
 Running Open-MPW Precheck Locally
@@ -283,78 +266,63 @@ Specify CARAVEL_ROOT before running any of the following,
    export CARAVEL_ROOT=<path-to-caravel>
    make run-precheck
 
-This will run all the precheck checks on your project and will produce the logs under the ``checks`` directory.
-
+This will run all the precheck checks on your project and will retain the logs under the ``checks`` directory.
 
 Other Miscellaneous Targets
 ============================
 
-The makefile provides a number of useful that targets that can run LVS, DRC, and XOR checks on your hardened design outside of openlane's flow. 
+The makefile provides a number of useful that targets that can run compress, uncompress, and run XOR checks on your design. 
 
-Run ```make help`` to display available targets. 
+Compress gds files and any file larger than 100MB (GH file size limit), 
 
-Specify CARAVEL_ROOT before running any of the following, 
+.. code:: bash
+
+   make compress
+
+Uncompress files, 
+
+.. code:: bash
+
+   make uncompress
+
+
+Specify ``CARAVEL_ROOT`` before running any of the following, 
 
 .. code:: bash
 
    # export CARAVEL_ROOT=$(pwd)/caravel 
    export CARAVEL_ROOT=<path-to-caravel>
-
-Run lvs on spice, 
-
-.. code:: bash
-
-   make lvs-<macro_name>
-
-Run lvs on the gds, 
-
-.. code:: bash
-
-   make lvs-gds-<macro_name>
-
-Run lvs on the maglef, 
-
-.. code:: bash
-
-   make lvs-maglef-<macro_name>
-
-Run drc using magic,
-
-.. code:: bash
-
-   make drc-<macro_name>
-
-Run antenna check using magic, 
-
-.. code:: bash
-
-   make antenna-<macro_name>
-
+   
 Run XOR check, 
 
 .. code:: bash
 
-   make xor-wrapper
-
+   make xor-analog-wrapper
 
 Checklist for Open-MPW Submission
 =================================
 
--  [x] The project repo adheres to the same directory structure in this
-   repo.
--  [x] The project repo contain info.yaml at the project root.
--  [x] Top level macro is named ``user_project_wrapper``.
--  [x] Full Chip Simulation passes for RTL and GL (gate-level)
--  [x] The hardened Macros are LVS and DRC clean
--  [x] The hardened ``user_project_wrapper`` adheres to the same pin
-   order specified at
-   `pin\_order <https://github.com/efabless/caravel/blob/master/openlane/user_project_wrapper_empty/pin_order.cfg>`__
--  [x] XOR check passes with zero total difference.
--  [x] Openlane summary reports are retained under ./signoff/
+
+|:heavy_check_mark:| The project repo adheres to the same directory structure in this repo.
+   
+|:heavy_check_mark:| The project repo contain info.yaml at the project root.
+
+|:heavy_check_mark:| Top level macro is named ``user_analog_project_wrapper``.
+
+|:heavy_check_mark:| Full Chip Simulation passes for RTL and GL (gate-level)
+
+|:heavy_check_mark:| The hardened Macros are LVS and DRC clean
+
+|:heavy_check_mark:| The ``user_analog_project_wrapper`` adheres to empty wrapper template  order specified at  `user_analog_project_wrapper_empty <https://github.com/efabless/caravel/blob/master/mag/user_analog_project_wrapper_empty.mag>`__
+
+|:heavy_check_mark:| XOR check passes with zero total difference.
+
+|:heavy_check_mark:| Open-MPW-Precheck tool runs successfully. 
+
 
 .. |License| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
-.. |User CI| image:: https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg
-   :target: https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml
-.. |Caravel Build| image:: https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg
-   :target: https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml
+.. |User CI| image:: https://github.com/efabless/caravel_user_project_analog/actions/workflows/user_project_ci.yml/badge.svg
+   :target: https://github.com/efabless/caravel_user_project_analog/actions/workflows/user_project_ci.yml
+.. |Caravan Build| image:: https://github.com/efabless/caravel_user_project_analog/actions/workflows/caravan_build.yml/badge.svg
+   :target: https://github.com/efabless/caravel_user_project_analog/actions/workflows/caravan_build.yml
