@@ -2,6 +2,3 @@
 	path = caravel
 	url = https://github.com/efabless/caravel_user_project_analog.git
 	branch = mpw-two
-[submodule "caravel-lite"]
-	path = caravel-lite
-	url = https://github.com/efabless/caravel-lite.git
