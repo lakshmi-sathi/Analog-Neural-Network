@@ -1,62 +1,28 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1627926120
+timestamp 1627922418
 << xpolycontact >>
 rect -35 262 35 694
 rect -35 -694 35 -262
 << ppolyres >>
 rect -35 -262 35 262
 << viali >>
-rect -17 640 17 674
-rect -17 568 17 602
-rect -17 496 17 530
-rect -17 424 17 458
-rect -17 352 17 386
-rect -17 280 17 314
-rect -17 -315 17 -281
-rect -17 -387 17 -353
-rect -17 -459 17 -425
-rect -17 -531 17 -497
-rect -17 -603 17 -569
-rect -17 -675 17 -641
+rect -19 279 19 676
+rect -19 -676 19 -279
 << metal1 >>
-rect -25 674 25 688
-rect -25 640 -17 674
-rect 17 640 25 674
-rect -25 602 25 640
-rect -25 568 -17 602
-rect 17 568 25 602
-rect -25 530 25 568
-rect -25 496 -17 530
-rect 17 496 25 530
-rect -25 458 25 496
-rect -25 424 -17 458
-rect 17 424 25 458
-rect -25 386 25 424
-rect -25 352 -17 386
-rect 17 352 25 386
-rect -25 314 25 352
-rect -25 280 -17 314
-rect 17 280 25 314
-rect -25 267 25 280
-rect -25 -281 25 -267
-rect -25 -315 -17 -281
-rect 17 -315 25 -281
-rect -25 -353 25 -315
-rect -25 -387 -17 -353
-rect 17 -387 25 -353
-rect -25 -425 25 -387
-rect -25 -459 -17 -425
-rect 17 -459 25 -425
-rect -25 -497 25 -459
-rect -25 -531 -17 -497
-rect 17 -531 25 -497
-rect -25 -569 25 -531
-rect -25 -603 -17 -569
-rect 17 -603 25 -569
-rect -25 -641 25 -603
-rect -25 -675 -17 -641
-rect 17 -675 25 -641
-rect -25 -688 25 -675
+rect -25 676 25 688
+rect -25 279 -19 676
+rect 19 279 25 676
+rect -25 267 25 279
+rect -25 -279 25 -267
+rect -25 -676 -19 -279
+rect 19 -676 25 -279
+rect -25 -688 25 -676
+<< res0p35 >>
+rect -37 -264 37 264
+<< properties >>
+string gencell sky130_fd_pr__res_high_po_0p35
+string parameters w 0.350 l 2.62 m 1 nx 1 wmin 0.350 lmin 0.50 rho 319.8 val 2.503k dummy 0 dw 0.0 term 19.188 sterm 0.0 caplen 0 guard 0 glc 0 grc 0 gtc 0 gbc 0 compatible {sky130_fd_pr__res_high_po_0p35  sky130_fd_pr__res_high_po_0p69 sky130_fd_pr__res_high_po_1p41  sky130_fd_pr__res_high_po_2p85 sky130_fd_pr__res_high_po_5p73} full_metal 0 wmax 0.350 vias 1 viagb 0 viagt 0 viagl 0 viagr 0
+string library sky130
 << end >>

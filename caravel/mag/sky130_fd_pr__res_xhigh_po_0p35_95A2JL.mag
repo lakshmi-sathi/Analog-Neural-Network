@@ -1,62 +1,28 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1627926120
+timestamp 1627921586
 << xpolycontact >>
 rect -35 893 35 1325
 rect -35 -1325 35 -893
 << xpolyres >>
 rect -35 -893 35 893
 << viali >>
-rect -17 1271 17 1305
-rect -17 1199 17 1233
-rect -17 1127 17 1161
-rect -17 1055 17 1089
-rect -17 983 17 1017
-rect -17 911 17 945
-rect -17 -946 17 -912
-rect -17 -1018 17 -984
-rect -17 -1090 17 -1056
-rect -17 -1162 17 -1128
-rect -17 -1234 17 -1200
-rect -17 -1306 17 -1272
+rect -19 910 19 1307
+rect -19 -1307 19 -910
 << metal1 >>
-rect -25 1305 25 1319
-rect -25 1271 -17 1305
-rect 17 1271 25 1305
-rect -25 1233 25 1271
-rect -25 1199 -17 1233
-rect 17 1199 25 1233
-rect -25 1161 25 1199
-rect -25 1127 -17 1161
-rect 17 1127 25 1161
-rect -25 1089 25 1127
-rect -25 1055 -17 1089
-rect 17 1055 25 1089
-rect -25 1017 25 1055
-rect -25 983 -17 1017
-rect 17 983 25 1017
-rect -25 945 25 983
-rect -25 911 -17 945
-rect 17 911 25 945
-rect -25 898 25 911
-rect -25 -912 25 -898
-rect -25 -946 -17 -912
-rect 17 -946 25 -912
-rect -25 -984 25 -946
-rect -25 -1018 -17 -984
-rect 17 -1018 25 -984
-rect -25 -1056 25 -1018
-rect -25 -1090 -17 -1056
-rect 17 -1090 25 -1056
-rect -25 -1128 25 -1090
-rect -25 -1162 -17 -1128
-rect 17 -1162 25 -1128
-rect -25 -1200 25 -1162
-rect -25 -1234 -17 -1200
-rect 17 -1234 25 -1200
-rect -25 -1272 25 -1234
-rect -25 -1306 -17 -1272
-rect 17 -1306 25 -1272
-rect -25 -1319 25 -1306
+rect -25 1307 25 1319
+rect -25 910 -19 1307
+rect 19 910 25 1307
+rect -25 898 25 910
+rect -25 -910 25 -898
+rect -25 -1307 -19 -910
+rect 19 -1307 25 -910
+rect -25 -1319 25 -1307
+<< res0p35 >>
+rect -37 -895 37 895
+<< properties >>
+string gencell sky130_fd_pr__res_xhigh_po_0p35
+string parameters w 0.350 l 8.93 m 1 nx 1 wmin 0.350 lmin 0.50 rho 2000 val 51.714k dummy 0 dw 0.0 term 120 sterm 0.0 caplen 0 wmax 0.350 guard 0 glc 0 grc 0 gtc 0 gbc 0 compatible {sky130_fd_pr__res_xhigh_po_0p35  sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41  sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} full_metal 0 vias 1 viagb 0 viagt 0 viagl 0 viagr 0
+string library sky130
 << end >>

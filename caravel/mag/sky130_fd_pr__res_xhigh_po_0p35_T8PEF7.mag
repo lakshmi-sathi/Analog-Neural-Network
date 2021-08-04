@@ -1,62 +1,28 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1627926120
+timestamp 1627922418
 << xpolycontact >>
 rect -35 383 35 815
 rect -35 -815 35 -383
 << xpolyres >>
 rect -35 -383 35 383
 << viali >>
-rect -17 761 17 795
-rect -17 689 17 723
-rect -17 617 17 651
-rect -17 545 17 579
-rect -17 473 17 507
-rect -17 401 17 435
-rect -17 -436 17 -402
-rect -17 -508 17 -474
-rect -17 -580 17 -546
-rect -17 -652 17 -618
-rect -17 -724 17 -690
-rect -17 -796 17 -762
+rect -19 400 19 797
+rect -19 -797 19 -400
 << metal1 >>
-rect -25 795 25 809
-rect -25 761 -17 795
-rect 17 761 25 795
-rect -25 723 25 761
-rect -25 689 -17 723
-rect 17 689 25 723
-rect -25 651 25 689
-rect -25 617 -17 651
-rect 17 617 25 651
-rect -25 579 25 617
-rect -25 545 -17 579
-rect 17 545 25 579
-rect -25 507 25 545
-rect -25 473 -17 507
-rect 17 473 25 507
-rect -25 435 25 473
-rect -25 401 -17 435
-rect 17 401 25 435
-rect -25 388 25 401
-rect -25 -402 25 -388
-rect -25 -436 -17 -402
-rect 17 -436 25 -402
-rect -25 -474 25 -436
-rect -25 -508 -17 -474
-rect 17 -508 25 -474
-rect -25 -546 25 -508
-rect -25 -580 -17 -546
-rect 17 -580 25 -546
-rect -25 -618 25 -580
-rect -25 -652 -17 -618
-rect 17 -652 25 -618
-rect -25 -690 25 -652
-rect -25 -724 -17 -690
-rect 17 -724 25 -690
-rect -25 -762 25 -724
-rect -25 -796 -17 -762
-rect 17 -796 25 -762
-rect -25 -809 25 -796
+rect -25 797 25 809
+rect -25 400 -19 797
+rect 19 400 25 797
+rect -25 388 25 400
+rect -25 -400 25 -388
+rect -25 -797 -19 -400
+rect 19 -797 25 -400
+rect -25 -809 25 -797
+<< res0p35 >>
+rect -37 -385 37 385
+<< properties >>
+string gencell sky130_fd_pr__res_xhigh_po_0p35
+string parameters w 0.350 l 3.83 m 1 nx 1 wmin 0.350 lmin 0.50 rho 2000 val 22.571k dummy 0 dw 0.0 term 120 sterm 0.0 caplen 0 wmax 0.350 guard 0 glc 0 grc 0 gtc 0 gbc 0 compatible {sky130_fd_pr__res_xhigh_po_0p35  sky130_fd_pr__res_xhigh_po_0p69 sky130_fd_pr__res_xhigh_po_1p41  sky130_fd_pr__res_xhigh_po_2p85 sky130_fd_pr__res_xhigh_po_5p73} full_metal 0 vias 1 viagb 0 viagt 0 viagl 0 viagr 0
+string library sky130
 << end >>
