@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1628080429
+timestamp 1628105024
 << metal1 >>
 rect -6183 4348 -4726 4674
 rect -6176 1604 -4518 1896
@@ -52,22 +52,22 @@ rect 1142 1270 1152 1736
 rect 436 1265 1152 1270
 rect 11886 190 13048 498
 rect -3039 -1845 -711 -1755
-use aninv_  aninv__2
+use analogneuron_invopamp_re_15kfeedbck  analogneuron_invopamp_re_15kfeedbck_0
+timestamp 1628105024
+transform 1 0 1354 0 1 234
+box -1354 -234 10724 2910
+use aninv_  aninv__0
 timestamp 1628080314
-transform -1 0 -2858 0 1 -1981
+transform -1 0 -2858 0 1 3671
 box -63 -721 1952 1584
 use aninv_  aninv__1
 timestamp 1628080314
 transform -1 0 -2858 0 1 899
 box -63 -721 1952 1584
-use aninv_  aninv__0
+use aninv_  aninv__2
 timestamp 1628080314
-transform -1 0 -2858 0 1 3671
+transform -1 0 -2858 0 1 -1981
 box -63 -721 1952 1584
-use analogneuron_invopamp_re_15kfeedbck  analogneuron_invopamp_re_15kfeedbck_0
-timestamp 1628079258
-transform 1 0 1354 0 1 234
-box -1354 -234 10900 2910
 << labels >>
 rlabel metal3 12386 200 13016 482 1 Out
 port 1 n
