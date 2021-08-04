@@ -20,7 +20,11 @@ ext2spice scale off
 
 # Allow override of PDK path from environment variable PDKPATH
 if {[catch {set PDKPATH $env(PDKPATH)}]} {
+<<<<<<< HEAD
     set PDKPATH "/mnt/c/Users/LENOVO/Documents/PLL/PDK_b_latest/open_pdks/sky130/sky130A"
+=======
+    set PDKPATH "/home/lss/skywater/open_pdks/sky130/sky130A"
+>>>>>>> 9f8c705aed29af69c9988300ab54f4c2fea626ee
 }
 
 # loading technology
