@@ -1,13 +1,13 @@
----
+ ---
 project:
-  description: "An analog project for Google sponsored Open MPW shuttles for SKY130."
+  description: "An analog implementation of the artificial neuron used in Machine Learning"
   foundry: "SkyWater"
-  git_url: "https://github.com/efabless/caravel_analog_user.git"
-  organization: "Efabless"
-  organization_url: "http://efabless.com"
-  owner: "Tim Edwards"
+  git_url: "https://github.com/lakshmi-sathi/Analog-Neural-Network.git"
+  organization: "Gatech"
+  organization_url: "http://gatech.edu"
+  owner: "Lakshmi S"
   process: "SKY130"
-  project_name: "Caravel Analog User"
+  project_name: "Analog Neuron"
   project_id: "00000000"
   tags:
     - "Open MPW"
