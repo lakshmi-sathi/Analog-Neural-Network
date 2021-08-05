@@ -1,0 +1,85 @@
+/home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty.gds /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds user_analog_project_wrapper
+
+Magic 8.3 revision 182 - Compiled on Sat Jul 24 11:39:08 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Using technology "minimum", version 0.0
+"sky130(vendor)" is not one of the CIF input styles Magic knows.
+Error: No style is set
+The CIF input styles are: .
+Don't know how to read GDS-II:
+Nothing in "cifinput" section of tech file.
+File user_analog_project_wrapper.mag couldn't be read
+No such file or directory
+Creating new cell
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   43.00 x 3520.00  (-43.00,  0.00 ), (  0.00,  3520.00)  151360.00 
+lambda:       43 x 3520    (   -43,  0    ), (     0,  3520 )  151360    
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   43.00 x 3520.00  ( 2920.00,  0.00 ), ( 2963.00,  3520.00)  151360.00 
+lambda:       43 x 3520    (  2920,  0    ), (  2963,  3520 )  151360    
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  3006.00 x 38.00   (-43.00, -38.00), ( 2963.00,  0.00 )  114228.00 
+lambda:     3006 x 38      (   -43, -38   ), (  2963,  0    )  114228    
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  3006.00 x 37.00   (-43.00,  3520.00), ( 2963.00,  3557.00)  111222.00 
+lambda:     3006 x 37      (   -43,  3520 ), (  2963,  3557 )  111222    
+can't read "errorCode": no such variable
+Unrecognized layer: metal5
+Layer names are:
+    mag or magnet
+    f or fence
+    r or rotate
+    $
+    *
+    errors
+    labels
+    subcell
+    connect
+Unrecognized layer: metal4
+Layer names are:
+    mag or magnet
+    f or fence
+    r or rotate
+    $
+    *
+    errors
+    labels
+    subcell
+    connect
+Unrecognized layer: metal5
+Layer names are:
+    mag or magnet
+    f or fence
+    r or rotate
+    $
+    *
+    errors
+    labels
+    subcell
+    connect
+Unrecognized layer: metal4
+Layer names are:
+    mag or magnet
+    f or fence
+    r or rotate
+    $
+    *
+    errors
+    labels
+    subcell
+    connect
+No CIF/GDS output style set!
+I/O error in writing file /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds.
+File may be incompletely written.
+/home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds

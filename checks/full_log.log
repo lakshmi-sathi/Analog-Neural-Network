@@ -1,0 +1,37 @@
+FULL RUN LOG:
+ Executing Step 0 of 8: Extracting GDS Files
+Step 0 done without fatal errors.
+ Executing Step 1 of 8: Project License Check
+{{LICENSE COMPLIANCE PASSED}} Apache-2.0 LICENSE file was found in project root
+ SPDX COMPLIANCE Found 2 non-compliant files with the SPDX Standard. Check full log for more information
+SPDX COMPLIANCE: NON-COMPLIANT FILES PREVIEW: ['/home/lss/Documents/AnalogNeuron/Analog-Neural-Network/README.md', '/home/lss/Documents/AnalogNeuron/Analog-Neural-Network/mag/.magicrc']
+ Executing Step 2 of 8: YAML File Check
+ YAML file valid!
+Step 2 done without fatal errors.
+ Detected Project Type is "analog"
+ Executing Step 3 of 8: Project Compliance Checks
+b'Going into /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/caravel'
+b'Removing manifest'
+b'Fetching manifest'
+b'Running sha1sum checks'
+ Manifest Checks Passed. Caravel Version Matches.
+ Makefile Checks Passed.
+ Documentation Checks Passed.
+ Executing Step 4 of 8: XOR Consistency Checks
+ Running XOR Checks...
+ XOR Checks on GDS Failed, Reason: Either you didn't mount the docker, or you ran out of RAM. Otherwise, magic is broken and it segfaulted. Please check: /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/magic_xor.log
+TEST FAILED AT STEP 4
+ Executing Step 5 of 8: DRC Violations Checks
+ Running Magic DRC Checks...
+ DRC Checks on User Project GDS Passed!
+Step 5 done without fatal errors.
+ Executing Step 6 of 8: KLayout DRC Violations Check
+ Running Klayout DRC Checks...
+ Klayout DRC Checks on GDS Failed, Reason: Total # of DRC violations is 9 Please check /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_klayout_drc.xmlFor more details
+TEST FAILED AT STEP 6
+ Executing Klayout offgrid check.
+ Klayout offgrid Checks on User Project GDS Passed!
+Step 7 done without fatal errors.
+ Klayout metal minimum clear area density Checks on User Project GDS Passed!
+Step 7 done without fatal errors.
+ SOME Checks FAILED !!!

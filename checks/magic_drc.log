@@ -1,0 +1,30 @@
+
+Magic 8.3 revision 182 - Compiled on Sat Jul 24 11:39:08 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Could not find file '/home/lss/skywater/open_pdks/sky130/sky130A//sky130A/libs.tech/magic/sky130A.tech' in any of these directories:
+         . /build/lib/magic/sys /build/lib/magic/sys/current
+Error parsing ".magicrc": couldn't read file "/home/lss/skywater/open_pdks/sky130/sky130A//sky130A/libs.tech/magic/sky130A.tcl": no such file or directory
+Bad local startup file ".magicrc", continuing without.
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading "/usr/local/bin/drc_checks/magic_drc_check.tcl" from command line.
+Don't know how to read GDS-II:
+Nothing in "cifinput" section of tech file.
+[INFO]: Loading user_analog_project_wrapper
+
+File user_analog_project_wrapper.mag couldn't be read
+No such file or directory
+Creating new cell
+"drc(full)" is not one of the DRC styles Magic knows.
+The current style is "default".
+The DRC styles are: default.
+No errors found.
+[INFO]: COUNT: 0
+[INFO]: Should be divided by 3 or 4
+[INFO]: DRC Checking DONE (/home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper.magic.drc)
+[INFO]: Saving mag view with DRC errors(/home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper.magic.drc.mag)
+[INFO]: Saved

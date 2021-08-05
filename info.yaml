@@ -1,4 +1,4 @@
- ---
+---
 project:
   description: "An analog implementation of the artificial neuron used in Machine Learning"
   foundry: "SkyWater"

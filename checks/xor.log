@@ -1,0 +1,11 @@
+First Layout: /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds
+Second Layout: /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_erased.gds
+Design Name: xor_target
+Output GDS will be: /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper.xor.gds
+Reading /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds ..
+ERROR: In /usr/local/bin/xor_checks/xor.drc: Stream has unknown format: /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds in Layout::read
+ERROR: Stream has unknown format: /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_empty_erased.gds in Layout::read in MacroInterpreter::execute
+  /usr/local/bin/xor_checks/xor.drc:15:in `execute_drc'
+  :/built-in-macros/drc_interpreters.lym:18:in `instance_eval'
+  :/built-in-macros/drc_interpreters.lym:18:in `execute_drc'
+  :/built-in-macros/drc_interpreters.lym:92:in `execute'

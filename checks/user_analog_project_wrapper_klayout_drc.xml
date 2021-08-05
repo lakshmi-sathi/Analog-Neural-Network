@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>SKY130 DRC runset</description>
+ <original-file/>
+ <generator>drc: script='/usr/local/bin/drc_checks/../tech-files/sky130A_mr.lydrc'</generator>
+ <top-cell>user_analog_project_wrapper</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>dnwell.2</name>
+   <description>dnwell.2 : min. dnwell width : 3.0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell.1</name>
+   <description>nwell.1 : min. nwell width : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell.2a</name>
+   <description>nwell.2a : min. nwell spacing (merged if less) : 1.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtp.1</name>
+   <description>hvtp.1 : min. hvtp width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtp.2</name>
+   <description>hvtp.2 : min. hvtp spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtr.1</name>
+   <description>hvtr.1 : min. hvtr width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtr.2</name>
+   <description>hvtr.2 : min. hvtr spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvtn.2</name>
+   <description>lvtn.2 : min. lvtn spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ncm.1</name>
+   <description>ncm.1 : min. ncm width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>difftap.3</name>
+   <description>difftap.3 : min. difftap spacing : 0.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>tunm.1</name>
+   <description>tunm.1 : min. tunm width : 0.41um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>tunm.2</name>
+   <description>tunm.2 : min. tunm spacing : 0.5um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly.1a</name>
+   <description>poly.1a : min. poly width : 0.15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly.2</name>
+   <description>poly.2 : min. poly spacing : 0.21um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>rpm.1a</name>
+   <description>rpm.1a : min. rpm width : 1.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>rpm.2</name>
+   <description>rpm.2 : min. rpm spacing : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>npc.1</name>
+   <description>npc.1 : min. npc width : 0.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>npc.2</name>
+   <description>npc.2 : min. npc spacing, should be mnually merge if less : 0.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.1</name>
+   <description>licon.1 : minimum/maximum width of licon : 0.17um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.1b/c</name>
+   <description>licon.1b/c : minimum/maximum width/length of licon inside poly resistor : 2.0/0.19um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.13</name>
+   <description>licon.13 : min. difftap licon spacing to npc : 0.09um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.1</name>
+   <description>capm.1 : min. capm width : 1.0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.2a</name>
+   <description>capm.2a : min. capm spacing : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.2b</name>
+   <description>capm.2b : min. capm spacing : 1.2um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.3</name>
+   <description>capm.3 : min. m2 enclosure of capm : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.4</name>
+   <description>capm.4 : min. capm enclosure of via2 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.5</name>
+   <description>capm.5 : min. capm spacing to via2 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvi.1</name>
+   <description>hvi.1 : min. hvi width : 0.6um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvntm.1</name>
+   <description>hvntm.1 : min. hvntm width : 0.7um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvntm.2</name>
+   <description>hvntm.2 : min. hvntm spacing : 0.7um</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>user_analog_project_wrapper</name>
+   <variant/>
+   <references>
+   </references>
+  </cell>
+  <cell>
+   <name>neuron_s</name>
+   <variant/>
+   <references>
+    <ref>
+     <parent>user_analog_project_wrapper</parent>
+     <trans>m0 *1 2486.45,3372.67</trans>
+    </ref>
+   </references>
+  </cell>
+  <cell>
+   <name>aninv_</name>
+   <variant/>
+   <references>
+    <ref>
+     <parent>user_analog_project_wrapper</parent>
+     <trans>r180 *1 2472.16,3382.575</trans>
+    </ref>
+   </references>
+  </cell>
+  <cell>
+   <name>analogneuron_invopamp_re_15kfeedbck</name>
+   <variant/>
+   <references>
+    <ref>
+     <parent>user_analog_project_wrapper</parent>
+     <trans>m0 *1 2493.22,3371.5</trans>
+    </ref>
+   </references>
+  </cell>
+  <cell>
+   <name>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</name>
+   <variant/>
+   <references>
+    <ref>
+     <parent>user_analog_project_wrapper</parent>
+     <trans>m45 *1 2489.02,3371.035</trans>
+    </ref>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'rpm.1a'</category>
+   <cell>aninv_</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (6.423,0.9;7.96,0.9)/(8.717,-0.12;7.18,-0.12)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (-0.095,0.46;-0.095,2.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (-0.095,2.46;0.095,2.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (0.095,2.46;0.095,0.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (0.095,0.46;-0.095,0.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (-0.095,-2.46;-0.095,-0.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (-0.095,-0.46;0.095,-0.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (0.095,-0.46;0.095,-2.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'licon.1'</category>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge: (0.095,-2.46;-0.095,-2.46)</value>
+   </values>
+  </item>
+ </items>
+</report-database>
