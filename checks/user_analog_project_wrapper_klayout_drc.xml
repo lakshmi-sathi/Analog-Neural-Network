@@ -226,12 +226,12 @@
    </references>
   </cell>
   <cell>
-   <name>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</name>
+   <name>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</name>
    <variant/>
    <references>
     <ref>
      <parent>user_analog_project_wrapper</parent>
-     <trans>m45 *1 2489.02,3371.035</trans>
+     <trans>m45 *1 2489.01,3371.065</trans>
     </ref>
    </references>
   </cell>
@@ -245,95 +245,95 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge-pair: (6.423,0.9;7.96,0.9)/(8.717,-0.12;7.18,-0.12)</value>
+    <value>edge-pair: (6.407,0.88;7.96,0.88)/(8.743,-0.12;7.19,-0.12)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (-0.095,0.46;-0.095,2.46)</value>
+    <value>edge: (-0.095,0.51;-0.095,2.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (-0.095,2.46;0.095,2.46)</value>
+    <value>edge: (-0.095,2.51;0.095,2.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (0.095,2.46;0.095,0.46)</value>
+    <value>edge: (0.095,2.51;0.095,0.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (0.095,0.46;-0.095,0.46)</value>
+    <value>edge: (0.095,0.51;-0.095,0.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (-0.095,-2.46;-0.095,-0.46)</value>
+    <value>edge: (-0.095,-2.51;-0.095,-0.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (-0.095,-0.46;0.095,-0.46)</value>
+    <value>edge: (-0.095,-0.51;0.095,-0.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (0.095,-0.46;0.095,-2.46)</value>
+    <value>edge: (0.095,-0.51;0.095,-2.51)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'licon.1'</category>
-   <cell>sky130_fd_pr__res_xhigh_po_0p35_NZHUVC</cell>
+   <cell>sky130_fd_pr__res_xhigh_po_0p35_NMF79C</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>edge: (0.095,-2.46;-0.095,-2.46)</value>
+    <value>edge: (0.095,-2.51;-0.095,-2.51)</value>
    </values>
   </item>
  </items>

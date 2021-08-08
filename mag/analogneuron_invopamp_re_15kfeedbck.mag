@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1628105024
+timestamp 1628375466
 << pwell >>
 rect 10446 320 10450 334
 << locali >>
@@ -205,6 +205,18 @@ rect 156 -30 10540 44
 rect 10668 -30 10686 232
 rect 156 -46 10686 -30
 rect -15 -54 10686 -46
+use sky130_fd_pr__res_xhigh_po_0p35_NMF79C  sky130_fd_pr__res_xhigh_po_0p35_NMF79C_2
+timestamp 1628375466
+transform 0 1 -840 -1 0 753
+box -37 -518 37 518
+use sky130_fd_pr__res_xhigh_po_0p35_NMF79C  sky130_fd_pr__res_xhigh_po_0p35_NMF79C_1
+timestamp 1628375466
+transform 0 1 -840 -1 0 417
+box -37 -518 37 518
+use sky130_fd_pr__res_xhigh_po_0p35_NMF79C  sky130_fd_pr__res_xhigh_po_0p35_NMF79C_0
+timestamp 1628375466
+transform 0 1 -842 -1 0 87
+box -37 -518 37 518
 use Stage1_inv  Stage1_inv_0
 timestamp 1627987662
 transform 1 0 362 0 1 1178
@@ -229,18 +241,6 @@ use biasnmos  biasnmos_0
 timestamp 1627800883
 transform 1 0 2416 0 1 90
 box -106 -320 4260 833
-use sky130_fd_pr__res_xhigh_po_0p35_NZHUVC  sky130_fd_pr__res_xhigh_po_0p35_NZHUVC_0
-timestamp 1627748178
-transform 0 1 -842 -1 0 741
-box -37 -508 37 508
-use sky130_fd_pr__res_xhigh_po_0p35_NZHUVC  sky130_fd_pr__res_xhigh_po_0p35_NZHUVC_1
-timestamp 1627748178
-transform 0 1 -844 -1 0 423
-box -37 -508 37 508
-use sky130_fd_pr__res_xhigh_po_0p35_NZHUVC  sky130_fd_pr__res_xhigh_po_0p35_NZHUVC_2
-timestamp 1627748178
-transform 0 1 -840 -1 0 93
-box -37 -508 37 508
 << labels >>
 rlabel metal1 10448 716 10622 1604 1 in2
 port 4 n

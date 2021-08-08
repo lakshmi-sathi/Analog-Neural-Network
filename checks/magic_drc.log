@@ -6,9 +6,9 @@ Using NULL graphics device.
 Processing system .magicrc file
 Sourcing design .magicrc for technology sky130A ...
 2 Magic internal units = 1 Lambda
-Could not find file '/home/lss/skywater/open_pdks/sky130/sky130A//sky130A/libs.tech/magic/sky130A.tech' in any of these directories:
+Could not find file '/home/lss/Documents/open_pdks/sky130/sky130A//sky130A/libs.tech/magic/sky130A.tech' in any of these directories:
          . /build/lib/magic/sys /build/lib/magic/sys/current
-Error parsing ".magicrc": couldn't read file "/home/lss/skywater/open_pdks/sky130/sky130A//sky130A/libs.tech/magic/sky130A.tcl": no such file or directory
+Error parsing ".magicrc": couldn't read file "/home/lss/Documents/open_pdks/sky130/sky130A//sky130A/libs.tech/magic/sky130A.tcl": no such file or directory
 Bad local startup file ".magicrc", continuing without.
 Scaled tech values by 2 / 1 to match internal grid scaling
 Loading "/usr/local/bin/drc_checks/magic_drc_check.tcl" from command line.
