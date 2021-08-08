@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1628375762
+timestamp 1628408178
 << poly >>
 rect 1196 371 1226 429
 rect 1143 367 1226 371
@@ -37,18 +37,19 @@ rect 1004 442 1014 782
 rect 1120 442 1130 782
 rect 1196 442 1206 782
 rect 1425 386 1548 1332
-rect 1660 684 1952 1006
+rect 1722 684 2014 1006
 rect 506 340 1548 386
 rect 324 140 334 208
 rect 766 140 776 208
 rect 1425 153 1548 340
-rect 1425 152 1705 153
+rect 1425 152 1820 153
 rect 334 20 762 140
-rect 1425 90 1798 152
-rect 974 74 1798 90
-rect 974 14 1796 74
-rect 1396 8 1796 14
-rect 1486 6 1666 8
+rect 1425 90 1860 152
+rect 974 74 1860 90
+rect 974 14 1858 74
+rect 1396 8 1858 14
+rect 1486 6 1626 8
+rect 1688 6 1728 8
 rect 244 -294 296 -230
 rect 448 -242 458 -190
 rect 776 -242 786 -190
@@ -157,29 +158,29 @@ rect 944 -340 954 -280
 rect 1272 -340 1282 -280
 rect 944 -345 1282 -340
 rect 954 -346 1210 -345
-use sky130_fd_pr__res_high_po_0p35_4HD3S6  sky130_fd_pr__res_high_po_0p35_4HD3S6_0
-timestamp 1628375762
-transform 0 1 866 -1 0 49
-box -37 -532 37 532
-use sky130_fd_pr__nfet_01v8_XG2GE7  sky130_fd_pr__nfet_01v8_XG2GE7_0
-timestamp 1628080314
-transform 0 1 838 -1 0 -309
-box -263 -720 263 720
+use sky130_fd_pr__res_high_po_0p69_7JPRER  sky130_fd_pr__res_high_po_0p69_7JPRER_0
+timestamp 1628069922
+transform 1 0 1781 0 1 543
+box -71 -527 71 527
 use sky130_fd_pr__pfet_01v8_396TWK  sky130_fd_pr__pfet_01v8_396TWK_0
 timestamp 1628080314
 transform 1 0 875 0 1 859
 box -551 -649 551 649
-use sky130_fd_pr__res_high_po_0p69_7JPRER  sky130_fd_pr__res_high_po_0p69_7JPRER_0
-timestamp 1628069922
-transform 1 0 1719 0 1 543
-box -71 -527 71 527
+use sky130_fd_pr__nfet_01v8_XG2GE7  sky130_fd_pr__nfet_01v8_XG2GE7_0
+timestamp 1628080314
+transform 0 1 838 -1 0 -309
+box -263 -720 263 720
+use sky130_fd_pr__res_high_po_0p35_4HD3S6  sky130_fd_pr__res_high_po_0p35_4HD3S6_0
+timestamp 1628375762
+transform 0 1 866 -1 0 49
+box -37 -532 37 532
 << labels >>
 rlabel metal2 -63 -721 1811 -597 1 GND
 port 2 n
 rlabel metal3 38 142 182 222 1 Out
 port 6 n
-rlabel metal1 1810 692 1948 1002 1 In
-port 5 n
 rlabel metal2 -52 1480 1818 1584 1 VDD
 port 1 n
+rlabel metal1 1872 692 2010 1002 1 In
+port 5 n
 << end >>

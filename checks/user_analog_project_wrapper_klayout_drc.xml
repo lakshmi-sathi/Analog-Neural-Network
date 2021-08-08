@@ -206,16 +206,6 @@
    </references>
   </cell>
   <cell>
-   <name>aninv_</name>
-   <variant/>
-   <references>
-    <ref>
-     <parent>user_analog_project_wrapper</parent>
-     <trans>r180 *1 2472.16,3382.575</trans>
-    </ref>
-   </references>
-  </cell>
-  <cell>
    <name>analogneuron_invopamp_re_15kfeedbck</name>
    <variant/>
    <references>
@@ -237,17 +227,6 @@
   </cell>
  </cells>
  <items>
-  <item>
-   <tags/>
-   <category>'rpm.1a'</category>
-   <cell>aninv_</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (6.407,0.88;7.96,0.88)/(8.743,-0.12;7.19,-0.12)</value>
-   </values>
-  </item>
   <item>
    <tags/>
    <category>'licon.1'</category>

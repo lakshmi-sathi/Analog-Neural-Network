@@ -27,7 +27,7 @@ TEST FAILED AT STEP 4
 Step 5 done without fatal errors.
  Executing Step 6 of 8: KLayout DRC Violations Check
  Running Klayout DRC Checks...
- Klayout DRC Checks on GDS Failed, Reason: Total # of DRC violations is 9 Please check /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_klayout_drc.xmlFor more details
+ Klayout DRC Checks on GDS Failed, Reason: Total # of DRC violations is 8 Please check /home/lss/Documents/AnalogNeuron/Analog-Neural-Network/checks/user_analog_project_wrapper_klayout_drc.xmlFor more details
 TEST FAILED AT STEP 6
  Executing Klayout offgrid check.
  Klayout offgrid Checks on User Project GDS Passed!
